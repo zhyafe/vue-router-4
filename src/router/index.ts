@@ -1,5 +1,6 @@
 import { App } from "vue";
 import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
+import setupGuard from "./guard";
 
 function setupRouter(app: App<Element>) {
   const routes: RouteRecordRaw[] = [
@@ -26,6 +27,8 @@ function setupRouter(app: App<Element>) {
     history: createWebHashHistory(),
     routes,
   });
+
+  setupGuard(router);
 
   app.use(router);
 }
