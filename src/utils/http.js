@@ -1,5 +1,4 @@
 import ZhyafeAxios from "@zhyafe/axios";
-console.log("🚀 ~ ZhyafeAxios:", ZhyafeAxios);
 
 let instance = new ZhyafeAxios(
   {
@@ -18,7 +17,6 @@ let instance = new ZhyafeAxios(
       console.log("err-modal", message);
     },
     errJudgeHandle: (data) => {
-      console.log("🚀 ~ data:", data);
       if (data.code === 0) {
         return { data: data.data };
       }
