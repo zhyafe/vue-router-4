@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>dashboard</div>
+    <div @click="handleGoUserList">go userList</div>
     <div @click="handleClick">logout</div>
   </div>
 </template>
@@ -17,6 +18,9 @@ onMounted(async () => {
   console.log("🚀 ~ res:", res);
 });
 
+const handleGoUserList = () => {
+  router.push({ name: "userList", params: { name: "xx" } });
+};
 const handleClick = () => {
   localStorage.removeItem("token");
   router.replace({ name: "login" });

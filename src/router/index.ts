@@ -20,6 +20,11 @@ function setupRouter(app: App<Element>) {
           name: "dashboard",
           component: () => import("@/views/dashboard/index.vue"),
         },
+        {
+          path: "userList",
+          name: "userList",
+          component: () => import("@/views/userList/index.vue"),
+        },
       ],
     },
   ];

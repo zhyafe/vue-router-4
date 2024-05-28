@@ -3,9 +3,11 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
+const route = useRoute();
+console.log("🚀 ~ route.params:", route.params);
 
 const handleClick = () => {
   localStorage.setItem("token", "aabb");
